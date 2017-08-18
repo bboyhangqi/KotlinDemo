@@ -4,10 +4,19 @@ package com.data.inheritance
  * Created by CodingHome on 18/08/2017.
  */
 
-open class People(open var name: String, open var age: Int) {
+open class People {
 
-    constructor() : this("Human", 10000)
+    open var name = ""
 
-    open fun speek() = println("my name is ${name} , i am $age years old")
+    init {
+        println("People is already initiated")
+    }
+
+    constructor(_name: String) {
+        this.name = _name
+    }
+
+
+    open fun speek() = println("I am a people")
 
 }
